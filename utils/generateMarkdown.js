@@ -1,4 +1,4 @@
-// Function to generate markdown for README
+// generateMarkdown.js
 function generateMarkdown(data) {
   return `
 # ${data.title}
@@ -32,6 +32,6 @@ ${data.tests}
 `;
 }
 
-// Export the generateMarkdown function to be used in other files
+// Export the function
 module.exports = generateMarkdown;
 

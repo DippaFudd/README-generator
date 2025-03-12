@@ -1,3 +1,4 @@
+// Function to generate markdown for README
 function generateMarkdown(data) {
   return `
 # ${data.title}
@@ -11,15 +12,26 @@ ${data.installation}
 ## Usage
 ${data.usage}
 
+## Credits
+${data.credits}
+
+## License
+This project is licensed under the ${data.license} license.
+
+## Badges
+${data.badges}
+
+## Features
+${data.features}
+
 ## Contributing
 ${data.contributing}
 
 ## Tests
 ${data.tests}
-
-## License
-This project is licensed under the ${data.license} license.
 `;
 }
 
+// Export the generateMarkdown function to be used in other files
 module.exports = generateMarkdown;
+

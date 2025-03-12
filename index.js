@@ -1,10 +1,9 @@
-// Include packages needed for this application
-const inquirer = require('inquirer');
 const fs = require('fs');
-const path = require('path');
+const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown'); // Assuming generateMarkdown is in the same directory
 
-// Create an array of questions for user input
-const questions = [
+// Prompt the user with questions to get data for README
+inquirer.prompt([
   {
     type: 'input',
     name: 'title',
@@ -23,37 +22,49 @@ const questions = [
   {
     type: 'input',
     name: 'usage',
-    message: 'What is the usage information?',
+    message: 'Provide usage information:',
+  },
+  {
+    type: 'input',
+    name: 'credits',
+    message: 'Who contributed to this project? (List collaborators or contributors)',
+  },
+  {
+    type: 'list',
+    name: 'license',
+    message: 'Choose a license for your project:',
+    choices: ['MIT', 'GPLv3', 'Apache 2.0', 'None'],
+  },
+  {
+    type: 'input',
+    name: 'badges',
+    message: 'Provide badges for your project (e.g., shield.io links):',
+  },
+  {
+    type: 'input',
+    name: 'features',
+    message: 'List the features of your project:',
   },
   {
     type: 'input',
     name: 'contributing',
-    message: 'What are the contribution guidelines?',
+    message: 'Provide contribution guidelines:',
   },
   {
     type: 'input',
     name: 'tests',
-    message: 'What are the test instructions?',
+    message: 'Provide test instructions:',
   },
-  {
-    type: 'input',
-    name: 'license',
-    message: 'What license is the project under?',
-  },
-];
+]).then((data) => {
+  // Generate the markdown text from the user's input
+  const markdown = generateMarkdown(data);
 
-// Create a function to write README file
-function writeToFile(fileName, data) {
-  fs.writeFileSync(path.join(process.cwd(), fileName), data);
-}
-
-// Create a function to initialize app
-function init() {
-  inquirer.prompt(questions).then((responses) => {
-    const readmeContent = generateMarkdown(responses);
-    writeToFile('README.md', readmeContent);
+  // Write the markdown to a README.md file in the current project directory
+  fs.writeFile('README.md', markdown, (err) => {
+    if (err) {
+      console.log('Error writing README file:', err);
+    } else {
+      console.log('README.md has been generated!');
+    }
   });
-}
-
-// Function call to initialize app
-init();
+});

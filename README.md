@@ -30,15 +30,17 @@ Welcome to the Professional README generator ! A command-line application to gen
 To install the necessary dependencies, follow these steps:
 
 1. **Clone the Repository**: Clone the repository to your local machine using the following command:
-    git clone https://github.com/yourusername/README-generator.git
+    git clone (cloned repo)
    
 2. **Navigate to the Project Directory**: Change your current directory to the project directory:
     cd README-generator
     
 3. **Install Dependencies**: Install the required dependencies using npm:
     npm install inquirer@8.2.4
+   
+5. **Test**: Npm run test   
     
-4. **Run the Application**: Start the application by running the following command:
+6. **Run the Application**: Start the application by running the following command:
     node index.js
 
 ## Questions
@@ -73,6 +75,6 @@ Provide contribution guidelines.
 Provide test instructions.
 
 ## Screen Recording
-
+https://app.screencastify.com/v3/watch/dtsRHzknFXqX3AO2LyP3
 
 

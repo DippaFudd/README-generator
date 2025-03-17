@@ -74,7 +74,10 @@ Provide contribution guidelines.
 ## Tests
 Provide test instructions.
 
-## Screen Recording
-https://app.screencastify.com/v3/watch/dtsRHzknFXqX3AO2LyP3
+## Screen Shot And Screen Recording
+![image alt](https://github.com/DippaFudd/README-generator/blob/4fcd95a5d5cdfcd493ab586f4591a87002d3a04c/2025-03-17.png)
+
+Video link :
+https://app.screencastify.com/v3/watch/dtsRHzknFXqX3AO2LyP3)
 
 

@@ -75,9 +75,9 @@ Provide contribution guidelines.
 Provide test instructions.
 
 ## Screen Shot And Screen Recording
-![image alt](https://github.com/DippaFudd/README-generator/blob/4fcd95a5d5cdfcd493ab586f4591a87002d3a04c/2025-03-17.png)
+![image alt](https://github.com/DippaFudd/README-generator/blob/42b21310ef2c11b1effd7ea147f80cc163e85dbb/Screenshot%20(4).png)
 
 Video link :
-https://app.screencastify.com/v3/watch/dtsRHzknFXqX3AO2LyP3)
+https://app.screencastify.com/watch/sh9Iq9AWVzg5lO1yaoRI?checkOrg=ba042ef8-b2f8-45dc-a2d9-2eec24d43dda
 
 
